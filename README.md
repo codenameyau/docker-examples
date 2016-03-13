@@ -2,7 +2,7 @@
 
 ### Cheatsheet
 
-```
+```bash
 # Stop all containers.
 sudo docker stop $(sudo docker ps -a -q)
 
@@ -13,7 +13,7 @@ sudo docker rm $(sudo docker ps -a -q)
 --
 
 ### Building a local docker container.
-```
+```bash
 # Build image locally.
 sudo docker build .
 
@@ -30,8 +30,8 @@ sudo docker attach <container-id>
 
 --
 
-### Publishsing a docker conatainer to docker hub.
-```
+### Publishsing a conatainer to Dockerhub.
+```bash
 # Create a Dockerhub account.
 https://hub.docker.com/
 
