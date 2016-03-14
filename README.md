@@ -27,7 +27,7 @@ sudo docker build -t <username>/<repo> .
 # Find your new docker image.
 sudo docker images
 
-# Run container (ports -> host:guest)
+# Run container (forward ports -> host:guest)
 sudo docker run -dit -p 8080:80 <image-id>
 sudo docker run -dit -p 8080:80 <image-name>
 sudo docker run -dit -p 8080:80 <image-name> -name <container-name>
