@@ -44,7 +44,7 @@ sudo docker rmi <image-name>
 
 --
 
-### Publishsing a conatainer to Dockerhub.
+### Publishing container to Dockerhub.
 
 ```bash
 # Create a Dockerhub account.
