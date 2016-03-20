@@ -18,7 +18,7 @@ sudo docker rmi $(sudo docker images -q)
 
 --
 
-### Building a local docker container.
+### Building a local docker container
 
 ```bash
 # Build image locally.
@@ -44,7 +44,7 @@ sudo docker rmi <image-name>
 
 --
 
-### Publishing container to Dockerhub.
+### Publishing container to Dockerhub
 
 ```bash
 # Create a Dockerhub account.

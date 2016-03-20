@@ -1,11 +1,11 @@
 PRODUCTION = {
-    "HOST": "0.0.0.0",
-    "PORT": 8000,
-    "DEBUG": False
+    "host": "0.0.0.0",
+    "port": 5000,
+    "debug": False
 }
 
 DEVELOPMENT = {
-    "HOST": "0.0.0.0",
-    "PORT": 8000,
-    "DEBUG": True
+    "host": "0.0.0.0",
+    "port": 5000,
+    "debug": True
 }

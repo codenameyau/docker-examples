@@ -6,9 +6,7 @@ ADD . /srv
 
 # Install packages.
 RUN apt-get -y update && install
-  python \
-  python-dev \
-  python-pip \
+  python3-pip \
   nginx
 RUN pip install -r /srv/requirements/prod.txt
 
