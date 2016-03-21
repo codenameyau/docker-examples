@@ -18,7 +18,7 @@ sudo docker rmi $(sudo docker images -q)
 
 --
 
-### Building a local docker container
+### Building and running a local container
 
 ```bash
 # Build image locally.
@@ -32,14 +32,13 @@ sudo docker run -dit -p 8080:80 <image-id>
 sudo docker run -dit -p 8080:80 <image-name>
 sudo docker run -dit -p 8080:80 <image-name> -name <container-name>
 
-# SSH into container.
+# SSH into container via attachment (halts process if you exit).
 sudo docker ps
 sudo docker attach <container-id>
 sudo docker attach <container-name>
 
-# Remove image.
-sudo docker rmi <image-id>
-sudo docker rmi <image-name>
+# SSH into container via new process (won't halt if you exit).
+sudo docker exec -it <container-id> bash
 ```
 
 --
