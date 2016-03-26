@@ -32,10 +32,15 @@ sudo docker run -dit -p 8080:80 <image-id>
 sudo docker run -dit -p 8080:80 <image-name>
 sudo docker run -dit -p 8080:80 <image-name> -name <container-name>
 
+# Run container with synced volume from host to guest.
+sudo docker run -dit -p 8080:80 -v $(pwd):<guest-dir> <image-name>
+
+# Lists all available containers and list just the container ids.
+sudo docker ps -a
+sudo docker ps -qa
+
 # SSH into container via attachment (halts process if you exit).
-sudo docker ps
 sudo docker attach <container-id>
-sudo docker attach <container-name>
 
 # SSH into container via new process (won't halt if you exit).
 sudo docker exec -it <container-id> bash
