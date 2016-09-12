@@ -35,6 +35,9 @@ sudo docker run -dit -p 8080:80 <image-name> -name <container-name>
 # Run container with synced volume from host to guest.
 sudo docker run -dit -p 8080:80 -v $(pwd):<guest-dir> <image-name>
 
+# Example: /darth_varder/ will be available in guest.
+sudo docker run -it -v $HOME/Workspace/tf_files:/darth_vader c3efccc5f94f
+
 # Lists all available containers and list just the container ids.
 sudo docker ps -a
 sudo docker ps -qa

@@ -12,10 +12,11 @@ RUN apt-get -y install \
   nginx
 
 # Install pip packages.
-RUN pip3 install -r /srv/requirements/prod.txt
+RUN pip3 install -r /srv/requirements.txt
 
 # Setup uWSGI.
+ADD ./deployment/application.conf /etc/init/application.conf
 
 # Setup nginx.
 RUN mkdir /etc/nginx/logs && touch /etc/nginx/logs/static.log
-ADD ./nginx/nginx.conf /etc/nginx/conf.d/default.conf
+ADD ./deployment/nginx.conf /etc/nginx/conf.d/default.conf

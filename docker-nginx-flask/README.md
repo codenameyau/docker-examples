@@ -1,6 +1,6 @@
 # docker-flask
 
-Application Stack: python3, pip3, flask, and nginx.
+Application Stack: python3, pip3, flask, and uWSGI with nginx.
 
 ### Container Details
 Http requests will be forwarded through nginx on HTTP port 80 to the Flask uWSGI
@@ -14,17 +14,8 @@ http://flask.pocoo.org/docs/0.10/config/
 
 ```bash
 # Running locally with flask dev server.
-python run.py
+python3 run.py
 
-# Running uWSGI locally.
-uwsgi --http 127.0.0.1:5000 -w application:application
-
-# Running uWSGI with nginx.
-uwsgi --socket 127.0.0.1:5000 -w application:application
-```
-
-```bash
-# These are the available URLS
-localhost:5000
-localhost:5000/boilerplate
+# Running locally with uWSGI server.
+uwsgi --socket 0.0.0.0:80 --protocol=http -w application:app
 ```
