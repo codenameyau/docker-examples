@@ -10,7 +10,16 @@ files (js, css, img, html, etc) will be served with nginx by default.
 If you need more sophisticated app configuration, check out:
 http://flask.pocoo.org/docs/0.10/config/
 
---
+```bash
+# Build the docker image.
+docker build -t nginx-flask .
+
+# Build a docker container instance.
+docker run -dit -p 8080:5000 -v $(pwd):/srv nginx-flask
+
+# Then visit:
+http://localhost:8080
+```
 
 ```bash
 # Running locally with flask dev server.

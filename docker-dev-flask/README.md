@@ -18,8 +18,20 @@ if you want to use a image that can be used in both dev and production.
 # Build the docker image.
 docker build -t <image-name> .
 
-# Build a docker container instance.
+# Build a docker container instance and mount volume.
 docker run -dit -p 8080:5000 -v $(pwd):/srv <image-name>
+
+# Then visit your browser or mobile device at:
+http://localhost:8080
+```
+
+### Debugging Instructions
+- https://stackoverflow.com/questions/41752405/running-flask-app-in-a-docker-container
+
+Going into docker container to debug it.
+``` bash
+# Method 1: You can run container with the '-d' flag.
+docker run -it -p 8080:5000 <image-name>
 
 # Attach the container.
 sudo docker exec -it <container-id> bash
@@ -27,7 +39,4 @@ sudo docker exec -it <container-id> bash
 # Running local flask dev server.
 cd /srv/app
 python3 run.py
-
-# Then visit your browser or mobile device at:
-http://localhost:8080
 ```

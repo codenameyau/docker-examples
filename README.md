@@ -1,8 +1,14 @@
 # docker-examples
+- https://github.com/wsargent/docker-cheat-sheet
+- https://docs.docker.com/get-started/part2/
+- http://containertutorials.com/docker-compose/flask-simple-app.html
 
 ### Cheatsheet
 
 ```bash
+# Starts a container.
+docker start
+
 # Stop all containers.
 sudo docker stop $(sudo docker ps -aq)
 
@@ -16,14 +22,9 @@ sudo docker rmi <image-id>
 sudo docker rmi $(sudo docker images -q)
 ```
 
---
-
 ### Building and running a local container
 
 ```bash
-# Build image locally.
-sudo docker build -t <username>/<repo> .
-
 # Find your new docker image.
 sudo docker images
 
@@ -49,11 +50,29 @@ sudo docker attach <container-id>
 sudo docker exec -it <container-id> bash
 ```
 
---
+### Basic Setup
+```bash
+sudo docker build -t nltk-flask .
+sudo docker run -dit -p 5000:5000 nltk-flask
+```
+
+Then visit: http://localhost:5000
+
+```bash
+# To enter container, run:
+sudo docker ps
+sudo docker exec -it <container-id-or-name> bash
+
+# While inside container use exit to prevent shutting down container.
+$ exit
+```
 
 ### Publishing container to Dockerhub
 
 ```bash
+# Build image locally.
+sudo docker build -t <username>/<repo> .
+
 # Create a Dockerhub account.
 https://hub.docker.com/
 

@@ -20,3 +20,8 @@ ADD ./deployment/application.conf /etc/init/application.conf
 # Setup nginx.
 RUN mkdir /etc/nginx/logs && touch /etc/nginx/logs/static.log
 ADD ./deployment/nginx.conf /etc/nginx/conf.d/default.conf
+
+# Start application.
+WORKDIR /srv
+ENTRYPOINT ["python3"]
+CMD ["app.py"]
