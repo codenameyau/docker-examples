@@ -30,9 +30,11 @@ sudo docker rmi $(sudo docker images -q)
 sudo docker images
 
 # Run container (forward ports -> host:guest)
-sudo docker run -dit -p 8080:80 <image-id>
-sudo docker run -dit -p 8080:80 <image-name>
-sudo docker run -dit -p 8080:80 <image-name> -name <container-name>
+sudo docker run -dit -p 8080:80 <image-id-or-name>
+sudo docker run -dit -p 8080:80 <image-id-or-name> -name <container-name>
+
+# Debug exited containers by removing the '-d' flag.
+sudo docker run -it <image-id-or-name>
 
 # Run container with synced volume from host to guest.
 sudo docker run -dit -p 8080:80 -v $(pwd):<guest-dir> <image-name>
@@ -41,8 +43,7 @@ sudo docker run -dit -p 8080:80 -v $(pwd):<guest-dir> <image-name>
 sudo docker run -it -v $HOME/Workspace/tf_files:/darth_vader c3efccc5f94f
 
 # Lists all available containers and list just the container ids.
-sudo docker ps -a
-sudo docker ps -qa
+sudo docker ps -aq
 
 # SSH into container via attachment (halts process if you exit).
 sudo docker attach <container-id>
