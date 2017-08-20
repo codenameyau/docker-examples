@@ -2,6 +2,7 @@
 - https://github.com/wsargent/docker-cheat-sheet
 - https://docs.docker.com/get-started/part2/
 - http://containertutorials.com/docker-compose/flask-simple-app.html
+- https://jpetazzo.github.io/2013/12/01/docker-python-pip-requirements/
 
 ### Cheatsheet
 
