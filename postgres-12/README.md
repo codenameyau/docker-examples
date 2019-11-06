@@ -6,6 +6,10 @@ After running these steps, you should create a separate docker image with your o
 docker-compose up
 ```
 
+You should see the following:
+
+![Docker Compose](https://user-images.githubusercontent.com/3826772/68315573-f76d3080-0085-11ea-8349-2dc8c4dde791.png)
+
 ## Adminer Access
 
 Visit http://localhost:8080 to access the **Adminer** web client. Make sure to change the System dropdown to PostgreSQL. You can use these credentials:
@@ -20,8 +24,5 @@ You can also access the database with a GUI client such as **Postico** with thes
 
 ## Container Info
 
-DockerHub:
-https://hub.docker.com/_/postgres
-
-Github Dockerfile:
-https://github.com/docker-library/postgres/blob/a8613f4cda3e932245f09c4d0f6733462b14b582/12/Dockerfile
+- DockerHub: https://hub.docker.com/_/postgres
+- Github Dockerfile: https://github.com/docker-library/postgres/blob/a8613f4cda3e932245f09c4d0f6733462b14b582/12/Dockerfile
