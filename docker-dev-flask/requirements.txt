@@ -6,7 +6,7 @@ chardet==2.2.1
 colorama==0.2.5
 html5lib==0.999
 itsdangerous==0.24
-requests==2.2.1
+requests==2.20.0
 six==1.5.2
 urllib3==1.7.1
 wheel==0.24.0
