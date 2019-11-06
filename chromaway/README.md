@@ -1,0 +1,5 @@
+# chromaway
+
+```
+docker-compose up
+```
