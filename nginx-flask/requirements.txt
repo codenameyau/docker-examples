@@ -9,5 +9,5 @@ itsdangerous==0.24
 requests==2.22.0
 six==1.5.2
 uWSGI==2.0.12
-urllib3==1.24.2
+urllib3==1.26.5
 wheel==0.24.0
