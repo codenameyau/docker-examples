@@ -8,5 +8,5 @@ html5lib==0.999
 itsdangerous==0.24
 requests==2.20.0
 six==1.5.2
-urllib3==1.24.2
+urllib3==1.26.5
 wheel==0.24.0
