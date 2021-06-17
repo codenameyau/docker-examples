@@ -29,6 +29,9 @@ docker rmi $(docker images -q)
 # Find your new docker image.
 docker images
 
+# Build the image
+docker build -t <image-name> .
+
 # Run container (forward ports -> host:guest)
 docker run -dit -p 8080:80 <image-id-or-name>
 
