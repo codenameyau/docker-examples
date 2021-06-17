@@ -9,22 +9,17 @@
 ```bash
 # Starts a container.
 docker start
-docker start
 
 # Stop all containers.
-docker stop $(docker ps -aq)
 docker stop $(docker ps -aq)
 
 # Remove all containers.
 docker rm $(docker ps -aq)
-docker rm $(docker ps -aq)
 
 # Remove image.
 docker rmi <image-id>
-docker rmi <image-id>
 
 # Remove all images.
-docker rmi $(docker images -q)
 docker rmi $(docker images -q)
 ```
 
@@ -33,38 +28,29 @@ docker rmi $(docker images -q)
 ```bash
 # Find your new docker image.
 docker images
-docker images
 
 # Run container (forward ports -> host:guest)
-docker run -dit -p 8080:80 <image-id-or-name>
 docker run -dit -p 8080:80 <image-id-or-name>
 
 # (Optional) You can also specify the container name.
 docker run -dit -p 8080:80 <image-id-or-name> -name <container-name>
-docker run -dit -p 8080:80 <image-id-or-name> -name <container-name>
 
 # Debug exited containers by removing the '-d' flag.
-docker run -it <image-id-or-name>
 docker run -it <image-id-or-name>
 
 # Run container with synced volume from host to guest.
 docker run -dit -p 8080:80 -v $(pwd):<guest-dir> <image-name>
-docker run -dit -p 8080:80 -v $(pwd):<guest-dir> <image-name>
 
 # Example: /darth_varder/ will be available in guest.
-docker run -it -v $HOME/Workspace/tf_files:/darth_vader c3efccc5f94f
 docker run -it -v $HOME/Workspace/tf_files:/darth_vader c3efccc5f94f
 
 # Lists all available containers and list just the container ids.
 docker ps -aq
-docker ps -aq
 
 # SSH into container via attachment (halts process if you exit).
 docker attach <container-id>
-docker attach <container-id>
 
 # SSH into container via new process (won't halt if you exit).
-docker exec -it <container-id> bash
 docker exec -it <container-id> bash
 ```
 
