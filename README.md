@@ -32,6 +32,9 @@ docker images
 # Build the image
 docker build -t <image-name> .
 
+# Run container in detached mode.
+docker run -d <name>
+
 # Run container (forward ports -> host:guest)
 docker run -dit -p 8080:80 <image-id-or-name>
 
