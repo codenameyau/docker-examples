@@ -21,6 +21,15 @@ docker rmi <image-id>
 
 # Remove all images.
 docker rmi $(docker images -q)
+
+# List running containers.
+docker ps
+
+# Lists all containers and list just the container ids.
+docker ps -a
+
+# List just the container ids.
+docker ps -q
 ```
 
 ### Building and running a local container
@@ -49,9 +58,6 @@ docker run -dit -p 8080:80 -v $(pwd):<guest-dir> <image-name>
 
 # Example: /darth_varder/ will be available in guest.
 docker run -it -v $HOME/Workspace/tf_files:/darth_vader c3efccc5f94f
-
-# Lists all available containers and list just the container ids.
-docker ps -aq
 
 # SSH into container via attachment (halts process if you exit).
 docker attach <container-id>
