@@ -54,10 +54,10 @@ docker run -dit -p 8080:80 <image-id-or-name> -name <container-name>
 docker run -it <image-id-or-name>
 
 # Run container with synced volume from host to guest.
-docker run -it <image-name> -p 8080:80 -v $(pwd):<guest-dir> 
+docker run -it -p 8080:80 -v $(pwd):<guest-dir> <image-name>
 
 # Example: /darth_varder/ will be available in guest.
-docker run -it c3efccc5f94f -v $HOME/Workspace/tf_files:/darth_vader
+docker run -it -v $HOME/Workspace/tf_files:/darth_vader c3efccc5f94f
 
 # SSH into container via attachment (halts process if you exit).
 docker attach <container-id>
