@@ -131,3 +131,23 @@ Anchore is a tool that can be integrated with the CI/CD pipeline to automate the
 vulnerabilities in a Docker image. To get started follow the instructions on this README:
 
 https://github.com/anchore/anchore-engine
+
+
+```
+# Add an image from docker.io
+anchore-cli --u admin --p foobar image add node:14
+
+# Add an image from host machine. (TODO)
+anchore-cli --u admin --p foobar image add node:14
+
+# List images.
+anchore-cli --u admin --p foobar image list
+```
+
+You can also set the following environment variables for authorization.
+
+```
+ANCHORE_CLI_URL=http://localhost:8228/v1
+ANCHORE_CLI_USER=admin
+ANCHORE_CLI_PASS=foobar
+```
