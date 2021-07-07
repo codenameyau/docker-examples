@@ -125,3 +125,9 @@ docker stop webserver
 docker rm -f webserver
 docker rmi nginx
 ```
+
+## Anchore
+Anchore is a tool that can be integrated with the CI/CD pipeline to automate the process of checking for security
+vulnerabilities in a Docker image. To get started follow the instructions on this README:
+
+https://github.com/anchore/anchore-engine
