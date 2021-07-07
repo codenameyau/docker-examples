@@ -133,7 +133,7 @@ vulnerabilities in a Docker image. To get started follow the instructions on thi
 https://github.com/anchore/anchore-engine
 
 
-```
+```sh
 # Add an image from docker.io
 anchore-cli --u admin --p foobar image add node:14
 
@@ -144,9 +144,10 @@ anchore-cli --u admin --p foobar image add node:14
 anchore-cli --u admin --p foobar image list
 ```
 
-You can also set the following environment variables for authorization.
+You can also set the following environment variables for authorization so you can omit the `--u admin` and `--p foobar` options.
 
-```
+```sh
+# First set these environment variables.
 ANCHORE_CLI_URL=http://localhost:8228/v1
 ANCHORE_CLI_USER=admin
 ANCHORE_CLI_PASS=foobar
