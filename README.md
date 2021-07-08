@@ -16,6 +16,9 @@ docker stop $(docker ps -aq)
 # Remove all containers.
 docker rm $(docker ps -aq)
 
+# Pruning unused images.
+docker system prune -a
+
 # Remove image.
 docker rmi <image-id>
 
