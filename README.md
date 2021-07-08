@@ -126,6 +126,19 @@ docker rm -f webserver
 docker rmi nginx
 ```
 
+## Docker scan
+Docker scan is a tool that can be used to scan for container security vulnerabilities. It returns an exit code 1
+whenever there is a high severity vulnerabiity and can be added into a CI/CD pipeline.
+
+```sh
+# Log into docker hub account.
+docker login
+
+# Scan image for vulnerabilities.
+docker scan <image>
+```
+
+
 ## Anchore
 Anchore is a tool that can be integrated with the CI/CD pipeline to automate the process of checking for security
 vulnerabilities in a Docker image. To get started follow the instructions on this README:
@@ -142,6 +155,24 @@ anchore-cli --u admin --p foobar image add node:14
 
 # List images.
 anchore-cli --u admin --p foobar image list
+
+# Get image details.
+anchore-cli --u admin --p foobar image get node:12
+
+# See files.
+anchore-cli --u admin --p foobar image content node:12 files
+
+# See OS libraries.
+anchore-cli --u admin --p foobar image content node:12 os
+
+# See image vulnerabilities
+anchore-cli --u admin --p foobar image vuln node:12 os
+
+# See system status.
+anchore-cli --u admin --p foobar system status
+
+# See system feed.
+anchore-cli --u admin --p foobar system feeds list
 ```
 
 You can also set the following environment variables for authorization so you can omit the `--u admin` and `--p foobar` options.
