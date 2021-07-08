@@ -144,7 +144,10 @@ docker scan <image>
 
 ## Anchore
 Anchore is a tool that can be integrated with the CI/CD pipeline to automate the process of checking for security
-vulnerabilities in a Docker image. You can run the script as a quick scan:
+vulnerabilities in a Docker image. As a safe precaution it is better to bump the amount of memory in your
+docker settings to around 4GB. 
+
+You can run the script as a quick scan:
 
 ```
 curl -s https://ci-tools.anchore.io/inline_scan-latest | bash -s -- -d ./Dockerfile image:latest
