@@ -141,7 +141,15 @@ docker scan <image>
 
 ## Anchore
 Anchore is a tool that can be integrated with the CI/CD pipeline to automate the process of checking for security
-vulnerabilities in a Docker image. To get started follow the instructions on this README:
+vulnerabilities in a Docker image. You can run the script as a quick scan:
+
+```
+curl -s https://ci-tools.anchore.io/inline_scan-latest | bash -s -- -d ./Dockerfile image:latest
+curl -s https://ci-tools.anchore.io/inline_scan-latest | bash -s -- -d ./Dockerfile ocr-1:latest
+```
+
+
+To get started with the anchore-cli, follow the instructions on this README:
 
 https://github.com/anchore/anchore-engine
 
